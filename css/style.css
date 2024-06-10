@@ -1,0 +1,98 @@
+.wraper {
+  height: 600px;
+  width: 600px;
+  background-color: lightgreen;
+  position: relative;
+
+  /* transition-property: all;
+  transition-duration: 5s;
+  transition-timing-function: linear;
+  transition-delay: 2s; */
+  transition: all 5s linear;
+}
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: yellow;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all 0.7s;
+}
+.wraper:hover {
+  background-color: lightblue;
+}
+/* .box:hover { */
+/* width: 250px; */
+/* background-color: red;
+  transform: translate(-50%, -50%) rotate(0deg);
+} */
+.wraper:hover .box {
+  background-color: red;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+
+
+/* keyframe */
+.car-move {
+    position: relative;
+    height: 150px;
+}
+.image-car {
+    height: 100px;
+    /* animation-name: carmove;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+    position: absolute;
+
+    animation: carmove 7s alternate infinite linear 2s;
+}
+
+
+@keyframes carmove {
+    from {left:0}
+    to {left: 800px}
+}
+
+
+/* car image 2 */
+.image-carNew {
+    height: 100px;
+    animation: carnew 5s infinite alternate;
+}
+
+@keyframes carnew {
+    0% {transform: translateX(0px)}
+    50% {transform: translateX(200px)}
+    75% {transform: translateX(400px)}
+    100% {transform: translateX(600px)}
+}
+
+
+
+
+
+/*  */
+
+
+.image-test {
+    width: 700px;
+    height: 900px;
+    object-fit: cover;
+}
+
+
+/* bg image */
+.bg-image {
+    background-image: url('https://images.ecestaticos.com/YeWUdVtOskDuwn_vTMyiIEK8gHI=/117x0:1972x1391/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F9bf%2F490%2F61d%2F9bf49061d1738ec4342cb7ad42214fdb.jpg');
+    height: 900px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
